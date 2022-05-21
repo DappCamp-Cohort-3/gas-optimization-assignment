@@ -20,11 +20,6 @@ The goal of this exercise is to optimize contracts for minimal gas usage. This a
 ## Evaluation
 
 -   Create a fork of this repo
--   Create a new branch with your name. You can use the following command
-
-    ```
-    git checkout -b my-name
-    ```
 
 -   Install all dependencies
     ```
@@ -36,4 +31,4 @@ The goal of this exercise is to optimize contracts for minimal gas usage. This a
     ```
     npm test
     ```
--   Create a pull request from your forked repo to main branch of original repo to run the github workflow.
+-   Create a pull request from your forked repo to main branch of original repo to run the github workflow. The name of the pull request should be in the format YOUR_NAME - Gas Optimization Assignment
