@@ -8,7 +8,15 @@ contract Example3 {
         returns (uint256 amountForSender, uint256 amountForOwner)
     {
         amountForSender = (amount * (100 - marginPercentage)) / 100;
-        amountForOwner = (amount * marginPercentage) / 100;
+        // change it from multiple to subtraction.
+        amountForOwner = amount - amountForSender;
     }
 
 }
+
+// deploy: 219743
+// execution: 25089
+
+// change it from multiple to subtraction.
+// deploy: 219731
+// execution: 24786
