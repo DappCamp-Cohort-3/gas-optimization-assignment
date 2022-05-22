@@ -1,3 +1,4 @@
+//SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
 
 contract Example3 {
@@ -7,8 +8,8 @@ contract Example3 {
         view
         returns (uint256 amountForSender, uint256 amountForOwner)
     {
-        amountForSender = (amount * (100 - marginPercentage)) / 100;
-        amountForOwner = (amount * marginPercentage) / 100;
+        amountForOwner = (amount * marginPercentage)/100;
+        amountForSender = amount - amountForOwner;        
     }
 
 }
