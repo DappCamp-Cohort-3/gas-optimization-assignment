@@ -12,8 +12,9 @@ contract Example3 {
         uint8 localMarginPercentage = marginPercentage;
         uint32 localAmount = amount;
 
-        amountForSender = (localAmount * (100 - localMarginPercentage)) / 100;
         amountForOwner = (localAmount * localMarginPercentage) / 100;
+        amountForSender = localAmount - amountForOwner;
+        
     }
 
 }
