@@ -26,7 +26,7 @@ describe("Example2", function () {
 
   it("should pass the gas test", async function() {
     const currentGas = (await example.estimateGas.incrementBy(arr)).toNumber();
-    console.log(currentGas);
+    // console.log(currentGas);
     assert(currentGas < BASE_GAS);
   });
 });
