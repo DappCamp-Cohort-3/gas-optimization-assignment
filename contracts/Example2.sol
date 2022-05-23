@@ -5,12 +5,12 @@ contract Example2 {
     uint public counter;
  
     function incrementBy(uint[] calldata arr) public {
-        //uint sum = counter;
-        //uint len = arr.length;
-        for (uint idx = 0; idx < arr.length; ++idx){
-            counter += arr[idx];
+        uint sum = counter;
+        uint len = arr.length;
+        for (uint idx = 0; idx < len; ++idx){
+            sum += arr[idx];
         }
-        //counter = sum;
+        counter = sum;
     }
 }
 
