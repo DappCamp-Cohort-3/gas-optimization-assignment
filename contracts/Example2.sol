@@ -5,7 +5,7 @@ pragma solidity ^0.8.4;
 contract Example2 {
     uint public counter;
  
-    function incrementBy(uint[] calldata arr) public {
+    function incrementBy(uint[] calldata arr) external {
         
         uint localCounter = counter;
         uint length = arr.length;
