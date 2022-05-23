@@ -1,14 +1,17 @@
 pragma solidity ^0.8.4;
 
 contract Example3 {
-    uint256 marginPercentage = 30;
+    uint8 constant marginPercentage = 30;
     function getOwnerMargin(uint256 amount)
-        public
-        view
+        external
+        pure
         returns (uint256 amountForSender, uint256 amountForOwner)
     {
-        amountForSender = (amount * (100 - marginPercentage)) / 100;
-        amountForOwner = (amount * marginPercentage) / 100;
+        // you could only use constants in a pure function
+        // margin is a constant
+        uint8 _marginPercentage = marginPercentage;
+        amountForSender = (amount * (100 - _marginPercentage)) / 100;
+        amountForOwner = (amount * _marginPercentage) / 100;
     }
 
 }
