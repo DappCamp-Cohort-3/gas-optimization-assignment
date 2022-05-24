@@ -1,5 +1,5 @@
 # Gas Optimization
-
+#
 ## Goal
 
 The goal of this exercise is to optimize contracts for minimal gas usage. This assignment contains 3 tasks in form of gas optimization examples. For each task your goal is to reduce the gas usage as much as possible
