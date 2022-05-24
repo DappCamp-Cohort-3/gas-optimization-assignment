@@ -7,8 +7,10 @@ contract Example3 {
         view
         returns (uint256 amountForSender, uint256 amountForOwner)
     {
-        amountForSender = (amount * (100 - marginPercentage)) / 100;
-        amountForOwner = (amount * marginPercentage) / 100;
+        uint256 localMarginPercentage = marginPercentage;
+
+        amountForSender = (amount * (100 - localMarginPercentage)) / 100;
+        amountForOwner = (amount * localMarginPercentage) / 100;
     }
 
 }

@@ -3,9 +3,17 @@ pragma solidity ^0.8.4;
 contract Example2 {
     uint public counter;
  
-    function incrementBy(uint[] memory arr) public {
-        for (uint idx = 0; idx < arr.length; idx++){
-            counter += arr[idx];
+    function incrementBy(uint[] calldata arr) public {
+        uint arrayLength = arr.length;
+        uint arraySum = 0;
+        for (uint idx = 0; idx < arrayLength;) {
+            arraySum += arr[idx];
+            
+            unchecked {
+                ++idx;
+            }
         }
+
+        counter += arraySum;
     }
 }
