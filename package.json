@@ -6,13 +6,15 @@
     "chai": "^4.3.4",
     "ethereum-waffle": "^3.4.0",
     "ethers": "^5.5.3",
-    "hardhat": "^2.8.3"
+    "hardhat": "^2.8.3",
+    "hardhat-gas-reporter": "^1.0.8",
+    "hardhat-watcher": "^2.3.0"
   },
   "dependencies": {
     "@primitivefi/hardhat-marmite": "^0.0.4"
   },
   "scripts": {
-		"compile": "npx hardhat compile",
-		"test": "npx hardhat test"
-	}
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test"
+  }
 }
