@@ -6,9 +6,9 @@ contract Example3 {
     function getOwnerMargin(uint256 amount)
         public
         pure
-        returns (uint256, uint256)
+        returns (uint256 amountForSender, uint256 amountForOwner)
     {
-        uint amountForOwner = (amount * marginPercentage) / 100;
-        return (amount - amountForOwner, amountForOwner);
+        amountForOwner = (amount * marginPercentage) / 100;
+        amountForSender = (amount - amountForOwner);
     }
 }
