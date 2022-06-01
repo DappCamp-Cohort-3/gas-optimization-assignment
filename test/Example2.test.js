@@ -11,7 +11,7 @@ describe("Example2", function () {
   beforeEach("deploy contract", async () => {
     const Example = await ethers.getContractFactory("Example2");
     example = await Example.deploy();
-    
+
     await example.deployed();
   });
 
@@ -24,7 +24,7 @@ describe("Example2", function () {
     expect(currCounter).to.equal(prevCounter + sum);
   });
 
-  it("should pass the gas test", async function() {
+  it("should pass the gas test", async function () {
     const currentGas = (await example.estimateGas.incrementBy(arr)).toNumber();
     assert(currentGas < BASE_GAS);
   });
