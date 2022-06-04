@@ -8,7 +8,7 @@ contract Example3 {
         returns (uint256 amountForSender, uint256 amountForOwner)
     {
         amountForSender = (amount * (100 - marginPercentage)) / 100;
-        amountForOwner = (amount * marginPercentage) / 100;
+        amountForOwner = amount - amountForSender;
     }
 
 }
