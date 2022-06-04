@@ -12,7 +12,7 @@
     "@primitivefi/hardhat-marmite": "^0.0.4"
   },
   "scripts": {
-		"compile": "npx hardhat compile",
-		"test": "npx hardhat test"
-	}
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test"
+  }
 }
